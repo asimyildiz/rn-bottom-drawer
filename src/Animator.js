@@ -29,7 +29,7 @@ export default class Animator extends Component{
           {...this.position.getLayout(), left: 0},
           StyleSheet.flatten([
             styles.animationContainer(this.props.containerHeight, this.props.backgroundColor),
-            styles.roundedEdges(this.props.roundedEdges),
+            styles.roundedEdges(this.props.roundedEdges, this.props.leftAndRightRadius),
             styles.shadow(this.props.shadow)
           ])
         ]}
@@ -90,10 +90,11 @@ const styles = {
     height: height + Math.sqrt(SCREEN_HEIGHT),
     backgroundColor: color,
   }),
-  roundedEdges: rounded => {
+  roundedEdges: (rounded, leftAndRightRadius) => {
     return rounded == true && {
-      borderTopLeftRadius: 10,
-      borderTopRightRadius: 10,
+      borderTopLeftRadius: leftAndRightRadius,
+      borderTopRightRadius: leftAndRightRadius,
+      overflow: 'hidden'
     }
   },
   shadow: shadow => {

@@ -57,7 +57,12 @@ export default class BottomDrawer extends Component{
     /**
      * A callback function triggered when the drawer swiped into down position
      */
-    onCollapsed: PropTypes.func
+    onCollapsed: PropTypes.func,
+
+    /**
+     * left and right radius values
+     */
+    leftAndRightRadius: PropTypes.number
   }
 
   static defaultProps = {
@@ -66,6 +71,7 @@ export default class BottomDrawer extends Component{
     backgroundColor: '#ffffff',
     roundedEdges: true,
     shadow: true,
+    leftAndRightRadius: 10,
     onExpanded: () => {},
     onCollapsed: () => {}
   }
@@ -99,6 +105,7 @@ export default class BottomDrawer extends Component{
         upPosition = {this.UP_POSITION}
         downPosition = {this.DOWN_POSITION}
         roundedEdges = {this.props.roundedEdges}
+        leftAndRightRadius = {this.props.leftAndRightRadius}
         shadow = {this.props.shadow}
         containerHeight = {this.props.containerHeight}
         backgroundColor = {this.props.backgroundColor}
