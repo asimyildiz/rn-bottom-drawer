@@ -63,6 +63,7 @@ export default class App extends React.Component {
 | backgroundColor | string | '#ffffff' | The background color of the drawer. |
 | startUp | bool | true | If **true**, the drawer will start in up position. If **false**, it will start in down position. |
 | roundedEdges | bool | true | If **true**, the top of the drawer will have rounded edges. |
+| leftAndRightRadius | number | 10 | The top left and right radius value of the drawer. |
 | shadow | bool | true | if **true**, the top of the drawer will have a shadow. |
 | onExpanded | func | -- | A callback function triggered when the drawer is swiped into up position |
 | onCollapsed | func | -- | A callback function triggered when the drawer is swiped into down position |
